@@ -2,7 +2,7 @@ import json
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('cloud-resume-challenge-table')
+table = dynamodb.Table('MyDynamoDBTable')
 
 def lambda_handler(event, context):
     response = table.get_item(Key={

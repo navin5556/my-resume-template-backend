@@ -30,6 +30,6 @@ variable "s3_key" {
 variable "dynamodb_table_name" {
   description = "The name of the DynamoDB table"
   type        = string
-  default     = "cloud-resume-challenge-table"  # replace with your actual table name
+  default     = "MyDynamoDBTable"  # replace with your actual table name
 }
 
