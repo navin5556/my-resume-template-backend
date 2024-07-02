@@ -33,3 +33,9 @@ variable "dynamodb_table_name" {
   default     = "MyDynamoDBTable"  # replace with your actual table name
 }
 
+
+variable "domain_name" {
+  description = "The name of the domain"
+  type        = string
+  default     = "*.devopsnaveen.info"  # replace with your actual domain name
+}
