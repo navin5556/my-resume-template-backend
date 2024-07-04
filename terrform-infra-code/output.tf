@@ -17,7 +17,7 @@ output "route53_name_servers" {
   value = aws_route53_zone.main.name_servers
 }
 
-# Output block to print the Lambda function URL
-output "function_url" {
-  value = aws_lambda_function_url.myfunc_url.invoke_url
-}
+# # Output block to print the Lambda function URL
+# output "function_url" {
+#   value = aws_lambda_function_url.myfunc_url.invoke_url
+# }
