@@ -7,7 +7,7 @@ resource "aws_route53_zone" "main" {
 # Create Route53 alias record for CloudFront distribution
 resource "aws_route53_record" "test_alias" {
   zone_id = aws_route53_zone.main.zone_id
-  name    = "naveen.devopsnaveen.info"
+  name    = "resume.devopsnaveen.info"
   type    = "A"
   alias {
     name                   = aws_cloudfront_distribution.cdn.domain_name
