@@ -33,13 +33,13 @@ jobs:
         working-directory: terrform-infra-code/
         run: terraform init
 
-      - name: Plan Terraform
-        working-directory: terrform-infra-code/
-        run: terraform plan
+      # - name: Plan Terraform
+      #   working-directory: terrform-infra-code/
+      #   run: terraform plan
 
-      - name: Apply Terraform
-        working-directory: terrform-infra-code/
-        run: terraform apply -auto-approve
+      # - name: Apply Terraform
+      #   working-directory: terrform-infra-code/
+      #   run: terraform apply -auto-approve
 
       - name: Destroy Terraform Infrastructure
         working-directory: terrform-infra-code/
