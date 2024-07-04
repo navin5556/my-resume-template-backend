@@ -19,5 +19,5 @@ output "route53_name_servers" {
 
 # Output block to print the Lambda function URL
 output "function_url" {
-  value = aws_lambda_function_url.myfunc_url.url
+  value = aws_lambda_function_url.myfunc_url.invoke_url
 }
