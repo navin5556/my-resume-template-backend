@@ -1,3 +1,21 @@
+# Define IAM role resource for the Lambda function
+resource "aws_iam_role" "lambda_for_lambda" {
+  name = "aws-cloud-resume-challenge-role"
+
+  assume_role_policy = jsonencode({
+    "Version" = "2012-10-17",
+    "Statement" = [
+      {
+        "Effect" = "Allow",
+        "Principal" = {
+          "Service" = "lambda.amazonaws.com"
+        },
+        "Action" = "sts:AssumeRole"
+      }
+    ]
+  })
+}
+
 # Define a customer-managed policy for Lambda
 resource "aws_iam_policy" "lambda_custom_policy" {
   name        = "lambda_custom_policy"                     # Name of the custom IAM policy

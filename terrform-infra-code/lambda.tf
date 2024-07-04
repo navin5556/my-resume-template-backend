@@ -24,28 +24,13 @@ resource "aws_lambda_function_url" "myfunc_url" {
 
 # Define the archive_file data source to create a ZIP file from the specified source directory
 data "archive_file" "zip" {
-  type        = "zip"                                        # Type of archive to create (ZIP)
-  source_dir  = "${path.module}/lambda/"                     # Directory containing the Lambda function code to be zipped
-  output_path = "${path.module}/packedlambda.zip"            # Path where the created ZIP file will be stored
+  type        = "zip"                              # Type of archive to create (ZIP)
+  source_dir  = "${path.module}/../lambda/"           # Directory containing the Lambda function code to be zipped
+  output_path = "${path.module}/packedlambda.zip"  # Path where the created ZIP file will be stored
 }
 
 # Data source to get AWS caller identity
+# The aws_caller_identity data source retrieves 
+# ...information about the AWS caller, such as the AWS account ID, user ID, and ARN
 data "aws_caller_identity" "current" {}
 
-# Define IAM role resource for the Lambda function
-resource "aws_iam_role" "lambda_for_lambda" {
-  name = "iam_role_for_lambda"
-
-  assume_role_policy = jsonencode({
-    "Version" = "2012-10-17",
-    "Statement" = [
-      {
-        "Effect" = "Allow",
-        "Principal" = {
-          "Service" = "lambda.amazonaws.com"
-        },
-        "Action" = "sts:AssumeRole"
-      }
-    ]
-  })
-}

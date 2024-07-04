@@ -11,3 +11,8 @@ output "route53_ns_records" {
 output "s3_bucket_name" {
   value = aws_s3_bucket.bucket.bucket
 }
+
+# Output the name servers for the hosted zone
+output "route53_name_servers" {
+  value = aws_route53_zone.main.name_servers
+}

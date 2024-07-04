@@ -15,8 +15,8 @@ terraform {
 
   backend "s3" {
     encrypt        = true
-    dynamodb_table = "devops-redis-in-terraform-lock" #provide your own dynamodb table
-    bucket         = "devops-redis-in-terraform-states" #provide your own s3 bucket
+    dynamodb_table = "devops-redis-in-terraform-lock" #provide your own dynamodb table for locking
+    bucket         = "devops-redis-in-terraform-states" #provide your own s3 bucket for storing state file
     key            = "cloud-resume-challenge-backend.tfstate"
     region         = "ap-south-1"
   }

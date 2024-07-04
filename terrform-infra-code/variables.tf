@@ -13,13 +13,13 @@ variable "aws_region" {
 variable "lambda_function_name" {
   description = "The name of the Lambda function"
   type        = string
-  default     = "my_lambda_function"
+  default     = "aws-cloud-resume-challenge-lambda"
 }
 
 variable "s3_bucket" {
   description = "The S3 bucket to upload the Lambda function code"
   type        = string
-  default     = "my-lambda-functions-bucket"  # change this to your bucket name
+  default     = "aws-cloud-resume-challenge-bucket"  # change this to your bucket name
 }
 
 variable "s3_key" {
@@ -30,7 +30,7 @@ variable "s3_key" {
 variable "dynamodb_table_name" {
   description = "The name of the DynamoDB table"
   type        = string
-  default     = "MyDynamoDBTable"  # replace with your actual table name
+  default     = "aws-cloud-resume-challenge-table"  # replace with your actual table name
 }
 
 

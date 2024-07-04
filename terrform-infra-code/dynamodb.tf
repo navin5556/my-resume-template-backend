@@ -9,7 +9,8 @@ resource "aws_dynamodb_table" "my_table" {
   }
 
   tags = {
-    Name = "MyDynamoDBTable"
+    Name = "aws-cloud-resume-challenge-table",
+    Project = "cloud-resume-challenge"
   }
 }
 
