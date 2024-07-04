@@ -40,3 +40,7 @@ jobs:
       - name: Apply Terraform
         working-directory: terrform-infra-code/
         run: terraform apply -auto-approve
+
+      - name: Destroy Terraform Infrastructure
+        working-directory: terrform-infra-code/
+        run: terraform destroy
