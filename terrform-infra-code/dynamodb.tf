@@ -14,7 +14,7 @@ resource "aws_dynamodb_table" "my_table" {
     Project = "cloud-resume-challenge"
   }
 }
-/
+
 # This resource adds an item to the created DynamoDB table.
 resource "aws_dynamodb_table_item" "example" {
   table_name = aws_dynamodb_table.my_table.name
