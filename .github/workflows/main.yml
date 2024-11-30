@@ -8,9 +8,9 @@ on:
     branches:
       - main
 
-jobs:
-  terraform:
-    name: Terraform Apply
+jobs: #This section defines all the jobs in the workflow.
+  terraform: #This is the name of the job. You can name it anything, but here it's named terraform.
+    name: Terraform Apply #This is a human-readable name for the job, which will appear in the GitHub Actions interface.
     runs-on: ubuntu-latest
 
     steps:
